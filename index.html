@@ -21,9 +21,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--white);
@@ -44,18 +42,13 @@ nav {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(15,110,86,0.08);
 }
-
 .nav-logo {
   font-family: 'DM Serif Display', serif;
   font-size: 1.5rem;
   color: var(--green-dark);
   letter-spacing: -0.02em;
 }
-
-.nav-logo span {
-  color: var(--green-light);
-}
-
+.nav-logo span { color: var(--green-light); }
 .nav-badge {
   font-size: 0.7rem;
   font-weight: 600;
@@ -78,30 +71,20 @@ nav {
   overflow: hidden;
   background: var(--grey-light);
 }
-
 .hero-bg {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background:
     radial-gradient(ellipse 60% 60% at 80% 20%, rgba(29,158,117,0.12) 0%, transparent 70%),
     radial-gradient(ellipse 40% 40% at 20% 80%, rgba(15,110,86,0.08) 0%, transparent 70%);
 }
-
 .hero-grid {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background-image:
     linear-gradient(rgba(15,110,86,0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15,110,86,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
-
-.hero-content {
-  position: relative;
-  max-width: 780px;
-  margin: 0 auto;
-}
-
+.hero-content { position: relative; max-width: 780px; margin: 0 auto; }
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -115,15 +98,12 @@ nav {
   opacity: 0;
   animation: fadeUp 0.6s ease 0.1s forwards;
 }
-
 .hero-tag::before {
   content: '';
-  width: 24px;
-  height: 2px;
+  width: 24px; height: 2px;
   background: var(--green-light);
   display: block;
 }
-
 h1 {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(2.8rem, 6vw, 5rem);
@@ -134,12 +114,7 @@ h1 {
   opacity: 0;
   animation: fadeUp 0.6s ease 0.2s forwards;
 }
-
-h1 em {
-  font-style: italic;
-  color: var(--green-light);
-}
-
+h1 em { font-style: italic; color: var(--green-light); }
 .hero-sub {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -150,7 +125,6 @@ h1 em {
   opacity: 0;
   animation: fadeUp 0.6s ease 0.3s forwards;
 }
-
 .hero-pills {
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +133,6 @@ h1 em {
   opacity: 0;
   animation: fadeUp 0.6s ease 0.4s forwards;
 }
-
 .pill {
   font-size: 0.8rem;
   font-weight: 500;
@@ -169,13 +142,11 @@ h1 em {
   border: 1.5px solid var(--accent);
   color: var(--green-dark);
 }
-
 .pill.highlight {
   background: var(--green-dark);
   color: var(--white);
   border-color: var(--green-dark);
 }
-
 .hero-cta {
   display: inline-flex;
   align-items: center;
@@ -191,23 +162,11 @@ h1 em {
   opacity: 0;
   animation: fadeUp 0.6s ease 0.5s forwards;
 }
-
-.hero-cta:hover {
-  background: var(--green);
-  transform: translateY(-2px);
-}
-
-.hero-cta svg {
-  width: 16px;
-  height: 16px;
-}
+.hero-cta:hover { background: var(--green); transform: translateY(-2px); }
+.hero-cta svg { width: 16px; height: 16px; }
 
 /* STATS BAR */
-.stats {
-  background: var(--green-dark);
-  padding: 2.5rem 2rem;
-}
-
+.stats { background: var(--green-dark); padding: 2.5rem 2rem; }
 .stats-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -216,7 +175,6 @@ h1 em {
   gap: 2rem;
   text-align: center;
 }
-
 .stat-num {
   font-family: 'DM Serif Display', serif;
   font-size: 2.5rem;
@@ -225,24 +183,112 @@ h1 em {
   line-height: 1;
   margin-bottom: 0.5rem;
 }
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); font-weight: 400; line-height: 1.4; }
 
-.stat-label {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.6);
-  font-weight: 400;
+/* PLATFORM BREAKDOWN */
+.platforms { padding: 4rem 2rem; background: var(--white); }
+.platforms-inner { max-width: 900px; margin: 0 auto; }
+.platforms-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.platforms-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-light);
+  margin-bottom: 0.5rem;
+}
+.platforms-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--green-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.platforms-total {
+  text-align: right;
+}
+.platforms-total-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--green-dark);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.platforms-total-label {
+  font-size: 0.75rem;
+  color: var(--grey);
+  margin-top: 0.25rem;
+}
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.platform-card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1.5px solid var(--accent);
+  background: var(--grey-light);
+  position: relative;
+  overflow: hidden;
+}
+.platform-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.platform-card.blinkit::before { background: #F8C32E; }
+.platform-card.instamart::before { background: #FC8019; }
+.platform-card.zepto::before { background: #8B5CF6; }
+.platform-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.platform-card.blinkit .platform-name { color: #B8860B; }
+.platform-card.instamart .platform-name { color: #C45E0A; }
+.platform-card.zepto .platform-name { color: #6D28D9; }
+.platform-deliveries {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  color: var(--green-dark);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.platform-sub {
+  font-size: 0.75rem;
+  color: var(--grey);
   line-height: 1.4;
 }
+.platform-bar {
+  margin-top: 1rem;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(15,110,86,0.08);
+  overflow: hidden;
+}
+.platform-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+.platform-card.blinkit .platform-bar-fill { background: #F8C32E; width: 52%; }
+.platform-card.instamart .platform-bar-fill { background: #FC8019; width: 28%; }
+.platform-card.zepto .platform-bar-fill { background: #8B5CF6; width: 20%; }
 
 /* PROBLEM */
-.section {
-  padding: 6rem 2rem;
-}
-
-.section-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
+.section { padding: 6rem 2rem; }
+.section-inner { max-width: 900px; margin: 0 auto; }
 .section-tag {
   font-size: 0.7rem;
   font-weight: 600;
@@ -254,15 +300,12 @@ h1 em {
   align-items: center;
   gap: 0.5rem;
 }
-
 .section-tag::after {
   content: '';
-  flex: 1;
-  height: 1px;
+  flex: 1; height: 1px;
   background: var(--accent);
   max-width: 48px;
 }
-
 h2 {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -271,69 +314,29 @@ h2 {
   line-height: 1.15;
   margin-bottom: 1.25rem;
 }
-
-.section-body {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--grey);
-  max-width: 620px;
-}
-
+.section-body { font-size: 1.05rem; line-height: 1.8; color: var(--grey); max-width: 620px; }
 .problem-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
   margin-top: 3rem;
 }
-
 .problem-card {
   background: var(--grey-light);
   border-radius: 16px;
   padding: 1.75rem;
   border: 1px solid rgba(15,110,86,0.08);
 }
-
-.problem-card-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.problem-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--green-dark);
-  margin-bottom: 0.5rem;
-}
-
-.problem-card p {
-  font-size: 0.875rem;
-  color: var(--grey);
-  line-height: 1.6;
-}
+.problem-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+.problem-card h3 { font-size: 1rem; font-weight: 600; color: var(--green-dark); margin-bottom: 0.5rem; }
+.problem-card p { font-size: 0.875rem; color: var(--grey); line-height: 1.6; }
 
 /* HOW IT WORKS */
-.how {
-  background: var(--green-dark);
-  padding: 6rem 2rem;
-}
-
-.how-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.how .section-tag {
-  color: var(--accent);
-}
-
-.how .section-tag::after {
-  background: rgba(181,227,208,0.3);
-}
-
-.how h2 {
-  color: var(--white);
-}
-
+.how { background: var(--green-dark); padding: 6rem 2rem; }
+.how-inner { max-width: 900px; margin: 0 auto; }
+.how .section-tag { color: var(--accent); }
+.how .section-tag::after { background: rgba(181,227,208,0.3); }
+.how h2 { color: var(--white); }
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -341,25 +344,16 @@ h2 {
   margin-top: 3rem;
   position: relative;
 }
-
 .steps::before {
   content: '';
   position: absolute;
-  top: 2.5rem;
-  left: 12%;
-  right: 12%;
+  top: 2.5rem; left: 12%; right: 12%;
   height: 1px;
   background: rgba(181,227,208,0.2);
 }
-
-.step {
-  text-align: center;
-  position: relative;
-}
-
+.step { text-align: center; position: relative; }
 .step-num {
-  width: 52px;
-  height: 52px;
+  width: 52px; height: 52px;
   border-radius: 50%;
   background: var(--green-light);
   color: var(--white);
@@ -369,41 +363,20 @@ h2 {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.25rem;
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
 }
-
-.step h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 0.5rem;
-}
-
-.step p {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.6;
-}
+.step h3 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+.step p { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
 
 /* BENEFITS */
-.benefits {
-  padding: 6rem 2rem;
-  background: var(--grey-light);
-}
-
-.benefits-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
+.benefits { padding: 6rem 2rem; background: var(--grey-light); }
+.benefits-inner { max-width: 900px; margin: 0 auto; }
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 3rem;
 }
-
 .benefit {
   background: var(--white);
   border-radius: 16px;
@@ -414,15 +387,9 @@ h2 {
   gap: 1rem;
   transition: border-color 0.2s, transform 0.2s;
 }
-
-.benefit:hover {
-  border-color: var(--green-light);
-  transform: translateY(-2px);
-}
-
+.benefit:hover { border-color: var(--green-light); transform: translateY(-2px); }
 .benefit-check {
-  width: 28px;
-  height: 28px;
+  width: 28px; height: 28px;
   border-radius: 50%;
   background: var(--green-pale);
   color: var(--green);
@@ -434,37 +401,18 @@ h2 {
   font-weight: 700;
   margin-top: 2px;
 }
-
-.benefit-text h4 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--green-dark);
-  margin-bottom: 0.25rem;
-}
-
-.benefit-text p {
-  font-size: 0.8rem;
-  color: var(--grey);
-  line-height: 1.5;
-}
+.benefit-text h4 { font-size: 0.95rem; font-weight: 600; color: var(--green-dark); margin-bottom: 0.25rem; }
+.benefit-text p { font-size: 0.8rem; color: var(--grey); line-height: 1.5; }
 
 /* STATUS */
-.status {
-  padding: 6rem 2rem;
-}
-
-.status-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
+.status { padding: 6rem 2rem; }
+.status-inner { max-width: 900px; margin: 0 auto; }
 .status-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 3rem;
 }
-
 .status-card {
   border-radius: 16px;
   padding: 1.75rem;
@@ -473,7 +421,6 @@ h2 {
   position: relative;
   overflow: hidden;
 }
-
 .status-card::before {
   content: '';
   position: absolute;
@@ -481,17 +428,14 @@ h2 {
   height: 3px;
   background: var(--green-light);
 }
-
 .status-dot {
-  width: 8px;
-  height: 8px;
+  width: 8px; height: 8px;
   border-radius: 50%;
   background: var(--green-light);
   margin-bottom: 1rem;
   box-shadow: 0 0 0 3px rgba(29,158,117,0.2);
   animation: pulse 2s infinite;
 }
-
 .status-card h4 {
   font-size: 0.8rem;
   font-weight: 600;
@@ -500,13 +444,7 @@ h2 {
   color: var(--green);
   margin-bottom: 0.5rem;
 }
-
-.status-card p {
-  font-size: 0.875rem;
-  color: var(--grey);
-  line-height: 1.5;
-}
-
+.status-card p { font-size: 0.875rem; color: var(--grey); line-height: 1.5; }
 .status-card .mono {
   font-family: 'Courier New', monospace;
   font-size: 0.75rem;
@@ -517,29 +455,10 @@ h2 {
 }
 
 /* CONTACT */
-.contact {
-  background: var(--green-dark);
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.contact-inner {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact h2 {
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-.contact p {
-  color: rgba(255,255,255,0.6);
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
-}
-
+.contact { background: var(--green-dark); padding: 6rem 2rem; text-align: center; }
+.contact-inner { max-width: 600px; margin: 0 auto; }
+.contact h2 { color: var(--white); margin-bottom: 1rem; }
+.contact p { color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.7; margin-bottom: 2.5rem; }
 .contact-email {
   display: inline-flex;
   align-items: center;
@@ -555,16 +474,24 @@ h2 {
   transition: background 0.2s;
   letter-spacing: 0.01em;
 }
+.contact-email:hover { background: rgba(255,255,255,0.14); }
+.patent-note { margin-top: 2rem; font-size: 0.75rem; color: rgba(255,255,255,0.35); letter-spacing: 0.04em; }
 
-.contact-email:hover {
-  background: rgba(255,255,255,0.14);
+/* FOUNDER STRIP */
+.founder-strip {
+  background: var(--green-pale);
+  border-top: 1px solid var(--accent);
+  padding: 1.25rem 2rem;
+  text-align: center;
 }
-
-.patent-note {
-  margin-top: 2rem;
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.35);
-  letter-spacing: 0.04em;
+.founder-strip p {
+  font-size: 0.82rem;
+  color: var(--green-dark);
+  font-weight: 500;
+}
+.founder-strip span {
+  font-weight: 700;
+  color: var(--green);
 }
 
 /* FOOTER */
@@ -575,17 +502,13 @@ footer {
   font-size: 0.75rem;
   color: rgba(255,255,255,0.25);
 }
-
-footer span {
-  color: rgba(255,255,255,0.5);
-}
+footer span { color: rgba(255,255,255,0.5); }
 
 /* ANIMATIONS */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 3px rgba(29,158,117,0.2); }
   50% { box-shadow: 0 0 0 6px rgba(29,158,117,0.1); }
@@ -596,9 +519,12 @@ footer span {
   .problem-grid,
   .benefits-grid,
   .status-cards,
-  .steps { grid-template-columns: 1fr; }
+  .steps,
+  .platforms-grid { grid-template-columns: 1fr; }
   .steps::before { display: none; }
   .stats-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .platforms-header { flex-direction: column; align-items: flex-start; }
+  .platforms-total { text-align: left; }
   nav { padding: 1rem; }
 }
 </style>
@@ -619,7 +545,7 @@ footer span {
     <div class="hero-tag">Reverse Logistics Recycling</div>
     <h1>Empty return trips.<br><em>Not anymore.</em></h1>
     <p class="hero-sub">
-      BlinkBack turns Blinkit's empty delivery return trips into a recycling network —
+      BlinkBack turns quick commerce's empty delivery return trips into a recycling network —
       collecting pre-sorted household waste at zero incremental fleet cost.
     </p>
     <div class="hero-pills">
@@ -629,7 +555,7 @@ footer span {
       <span class="pill">Patent Pending</span>
       <span class="pill">Rider Bonuses</span>
     </div>
-    <a href="mailto:blinkbackindia@gmail.com" class="hero-cta">
+    <a href="#contact" class="hero-cta">
       Get in touch
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M3 8h10M9 4l4 4-4 4"/>
@@ -642,8 +568,8 @@ footer span {
 <div class="stats">
   <div class="stats-inner">
     <div>
-      <div class="stat-num">3M+</div>
-      <div class="stat-label">Blinkit deliveries daily — every return trip currently empty</div>
+      <div class="stat-num">6M+</div>
+      <div class="stat-label">Quick commerce deliveries daily across platforms — every return trip currently empty</div>
     </div>
     <div>
       <div class="stat-num">₹0</div>
@@ -656,13 +582,49 @@ footer span {
   </div>
 </div>
 
+<!-- PLATFORM BREAKDOWN -->
+<div class="platforms">
+  <div class="platforms-inner">
+    <div class="platforms-header">
+      <div>
+        <div class="platforms-title">Daily Delivery Volume</div>
+        <div class="platforms-heading">Empty return trips,<br>across every platform.</div>
+      </div>
+      <div class="platforms-total">
+        <div class="platforms-total-num">6M+</div>
+        <div class="platforms-total-label">Combined daily deliveries<br>— all return trips empty</div>
+      </div>
+    </div>
+    <div class="platforms-grid">
+      <div class="platform-card blinkit">
+        <div class="platform-name">Blinkit</div>
+        <div class="platform-deliveries">3.1M+</div>
+        <div class="platform-sub">deliveries per day<br>~52% of total market</div>
+        <div class="platform-bar"><div class="platform-bar-fill"></div></div>
+      </div>
+      <div class="platform-card instamart">
+        <div class="platform-name">Swiggy Instamart</div>
+        <div class="platform-deliveries">1.7M+</div>
+        <div class="platform-sub">deliveries per day<br>~28% of total market</div>
+        <div class="platform-bar"><div class="platform-bar-fill"></div></div>
+      </div>
+      <div class="platform-card zepto">
+        <div class="platform-name">Zepto</div>
+        <div class="platform-deliveries">1.2M+</div>
+        <div class="platform-sub">deliveries per day<br>~20% of total market</div>
+        <div class="platform-bar"><div class="platform-bar-fill"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- PROBLEM -->
 <section class="section">
   <div class="section-inner">
     <div class="section-tag">The Problem</div>
     <h2>Paid logistics.<br>Going nowhere.</h2>
     <p class="section-body">
-      Amid rising fuel costs, every empty Blinkit return trip is an increasingly expensive missed opportunity.
+      Amid rising fuel costs, every empty quick commerce return trip is an increasingly expensive missed opportunity.
       Millions of return trips daily — each one burning fuel, earning nothing.
       Meanwhile, India's EPR compliance burden on FMCG brands grows every year with no scalable collection solution.
     </p>
@@ -705,7 +667,7 @@ footer span {
       <div class="step">
         <div class="step-num">2</div>
         <h3>Rider collects on return</h3>
-        <p>The Blinkit rider collects the sealed bag on the return trip. No extra route. No extra fuel. No extra vehicle.</p>
+        <p>The rider collects the sealed bag on the return trip. No extra route. No extra fuel. No extra vehicle.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
@@ -785,7 +747,7 @@ footer span {
         <div class="status-dot"></div>
         <h4>Company Registration</h4>
         <p>BlinkBack Technologies Private Limited — registration in progress.</p>
-        <span class="mono">IndiaFilings · May 2026</span>
+        <span class="mono">BHASKAR · IN-0526-9465CS</span>
       </div>
       <div class="status-card">
         <div class="status-dot"></div>
@@ -798,7 +760,7 @@ footer span {
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
+<section class="contact" id="contact">
   <div class="contact-inner">
     <div class="section-tag" style="justify-content:center;color:var(--accent)">Get In Touch</div>
     <h2>Let's talk.</h2>
@@ -814,6 +776,11 @@ footer span {
     </p>
   </div>
 </section>
+
+<!-- FOUNDER STRIP -->
+<div class="founder-strip">
+  <p>Founded by <span>Rishabh Sandhu</span> · BlinkBack Technologies Private Limited · BHASKAR ID: <span>IN-0526-9465CS</span></p>
+</div>
 
 <!-- FOOTER -->
 <footer>
